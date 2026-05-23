@@ -188,7 +188,7 @@ function OsirisMap({ data, activeLayers, onEntityClick, onMouseCoords, onRightCl
       map.addLayer({ id: 'eq-circles', type: 'circle', source: 'earthquakes', paint: {
         'circle-radius': ['interpolate',['linear'],['get','magnitude'], 2.5,4, 5,12, 7,24],
         'circle-color': ['interpolate',['linear'],['get','magnitude'], 2.5,'#FFD700', 4,'#FF9500', 6,'#FF1744'],
-        'circle-opacity': 0.6, 'circle-blur': 0.3, 'circle-stroke-width': 1, 'circle-stroke-color': '#FFD700', 'circle-stroke-opacity': 0.3,
+        'circle-opacity': 0.75, 'circle-blur': 0.2, 'circle-stroke-width': 1.5, 'circle-stroke-color': '#FFD700', 'circle-stroke-opacity': 0.55,
       }});
       map.addLayer({ id: 'eq-label', type: 'symbol', source: 'earthquakes', filter: ['>=',['get','magnitude'],4.5], layout: {
         'text-field': ['concat','M',['to-string',['get','magnitude']]], 'text-size': 9, 'text-font': ['Open Sans Regular'], 'text-offset': [0,1.5],
@@ -197,13 +197,13 @@ function OsirisMap({ data, activeLayers, onEntityClick, onMouseCoords, onRightCl
       // Fires
       map.addLayer({ id: 'fires-heat', type: 'circle', source: 'fires', paint: {
         'circle-radius': ['interpolate',['linear'],['zoom'], 1,2, 5,4, 10,8],
-        'circle-color': '#FF6B00', 'circle-opacity': 0.5, 'circle-blur': 0.5,
+        'circle-color': '#FF6B00', 'circle-opacity': 0.70, 'circle-blur': 0.25,
       }});
 
       // CCTV — outer glow ring
       map.addLayer({ id: 'cctv-glow', type: 'circle', source: 'cctv', paint: {
         'circle-radius': ['interpolate',['linear'],['zoom'], 1,5, 5,8, 10,14, 14,20],
-        'circle-color': '#39FF14', 'circle-opacity': 0.08, 'circle-blur': 1,
+        'circle-color': '#39FF14', 'circle-opacity': 0.22, 'circle-blur': 0.8,
       }});
       // CCTV — main dot
       map.addLayer({ id: 'cctv-dots', type: 'circle', source: 'cctv', paint: {
@@ -223,7 +223,7 @@ function OsirisMap({ data, activeLayers, onEntityClick, onMouseCoords, onRightCl
       }});
 
       // GPS Jamming
-      map.addLayer({ id: 'jam-fill', type: 'circle', source: 'gps-jamming', paint: { 'circle-radius': 30, 'circle-color': '#FF0000', 'circle-opacity': 0.15, 'circle-blur': 1 }});
+      map.addLayer({ id: 'jam-fill', type: 'circle', source: 'gps-jamming', paint: { 'circle-radius': ['interpolate',['linear'],['zoom'], 1,12, 5,22, 10,40], 'circle-color': '#FF0000', 'circle-opacity': 0.32, 'circle-blur': 0.8 }});
       map.addLayer({ id: 'jam-label', type: 'symbol', source: 'gps-jamming', layout: {
         'text-field': ['concat','GPS JAM ',['to-string',['get','severity']],'%'], 'text-size': 10, 'text-font': ['Open Sans Bold'], 'text-allow-overlap': true,
       }, paint: { 'text-color': '#FF4444', 'text-halo-color': '#000', 'text-halo-width': 1 }});
@@ -231,7 +231,7 @@ function OsirisMap({ data, activeLayers, onEntityClick, onMouseCoords, onRightCl
       // Weather Events (NASA EONET — storms, volcanoes)
       map.addLayer({ id: 'weather-glow', type: 'circle', source: 'weather', paint: {
         'circle-radius': ['interpolate',['linear'],['zoom'], 1,12, 5,20, 10,30],
-        'circle-color': '#E040FB', 'circle-opacity': 0.1, 'circle-blur': 1,
+        'circle-color': '#E040FB', 'circle-opacity': 0.22, 'circle-blur': 0.8,
       }});
       map.addLayer({ id: 'weather-dots', type: 'circle', source: 'weather', paint: {
         'circle-radius': ['interpolate',['linear'],['zoom'], 1,5, 5,8, 10,14],
@@ -247,7 +247,7 @@ function OsirisMap({ data, activeLayers, onEntityClick, onMouseCoords, onRightCl
       // Nuclear Infrastructure
       map.addLayer({ id: 'infra-glow', type: 'circle', source: 'infrastructure', paint: {
         'circle-radius': ['interpolate',['linear'],['zoom'], 1,8, 5,14, 10,22],
-        'circle-color': '#76FF03', 'circle-opacity': 0.08, 'circle-blur': 1,
+        'circle-color': '#76FF03', 'circle-opacity': 0.20, 'circle-blur': 0.8,
       }});
       map.addLayer({ id: 'infra-dots', type: 'circle', source: 'infrastructure', paint: {
         'circle-radius': ['interpolate',['linear'],['zoom'], 1,4, 5,6, 10,10],
@@ -262,7 +262,7 @@ function OsirisMap({ data, activeLayers, onEntityClick, onMouseCoords, onRightCl
 
       // Satellites
       map.addLayer({ id: 'sat-dots', type: 'circle', source: 'satellites', paint: {
-        'circle-radius': ['interpolate',['linear'],['zoom'], 1,1.5, 5,3], 'circle-color': ['get','color'], 'circle-opacity': 0.7,
+        'circle-radius': ['interpolate',['linear'],['zoom'], 1,2.5, 5,5, 10,8], 'circle-color': ['get','color'], 'circle-opacity': 0.85,
       }});
 
       // Maritime — ports & naval bases
@@ -285,7 +285,7 @@ function OsirisMap({ data, activeLayers, onEntityClick, onMouseCoords, onRightCl
       // Maritime chokepoints — pulsing warning diamonds
       map.addLayer({ id: 'choke-glow', type: 'circle', source: 'maritime-choke', paint: {
         'circle-radius': ['interpolate',['linear'],['zoom'], 1,10, 5,18, 10,28],
-        'circle-color': '#FF9500', 'circle-opacity': 0.12, 'circle-blur': 1,
+        'circle-color': '#FF9500', 'circle-opacity': 0.25, 'circle-blur': 0.8,
       }});
       map.addLayer({ id: 'choke-dots', type: 'circle', source: 'maritime-choke', paint: {
         'circle-radius': ['interpolate',['linear'],['zoom'], 1,4, 5,7, 10,12],
@@ -316,7 +316,7 @@ function OsirisMap({ data, activeLayers, onEntityClick, onMouseCoords, onRightCl
       // SIGINT RSS news - gold markers
       map.addLayer({ id: 'sigint-news-glow', type: 'circle', source: 'sigint-news', paint: {
         'circle-radius': ['interpolate',['linear'],['zoom'], 1,6, 5,10, 10,18],
-        'circle-color': '#D4AF37', 'circle-opacity': 0.12, 'circle-blur': 1,
+        'circle-color': '#D4AF37', 'circle-opacity': 0.25, 'circle-blur': 0.8,
       }});
       map.addLayer({ id: 'sigint-news-dots', type: 'circle', source: 'sigint-news', paint: {
         'circle-radius': ['interpolate',['linear'],['zoom'], 1,3, 5,5, 10,8],
@@ -339,7 +339,7 @@ function OsirisMap({ data, activeLayers, onEntityClick, onMouseCoords, onRightCl
       }});
       map.addLayer({ id: 'sweep-device-glow', type: 'circle', source: 'ip-sweep-devices', paint: {
         'circle-radius': ['interpolate',['linear'],['zoom'], 8,8, 12,16, 16,30],
-        'circle-color': ['get', 'color'], 'circle-opacity': 0.15, 'circle-blur': 1,
+        'circle-color': ['get', 'color'], 'circle-opacity': 0.28, 'circle-blur': 0.8,
       }});
       map.addLayer({ id: 'sweep-device-dots', type: 'circle', source: 'ip-sweep-devices', paint: {
         'circle-radius': ['interpolate',['linear'],['zoom'], 8,3, 12,6, 16,10],
@@ -384,7 +384,7 @@ function OsirisMap({ data, activeLayers, onEntityClick, onMouseCoords, onRightCl
       map.addLayer({ id: 'rad-glow', type: 'circle', source: 'radiation', paint: {
         'circle-radius': ['interpolate',['linear'],['zoom'], 1,10, 5,20, 10,40],
         'circle-color': ['match', ['get','status'], 'DANGER','#FF1744', 'WARNING','#FF9500', '#AB47BC'],
-        'circle-opacity': 0.15, 'circle-blur': 1,
+        'circle-opacity': 0.28, 'circle-blur': 0.8,
       }});
       map.addLayer({ id: 'rad-dots', type: 'circle', source: 'radiation', paint: {
         'circle-radius': ['interpolate',['linear'],['zoom'], 1,4, 5,6, 10,8],
