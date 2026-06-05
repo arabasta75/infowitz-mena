@@ -2,8 +2,8 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 const SITE_URL = "https://3ifrit.up.railway.app";
-const SITE_NAME = "3IFRIT";
-const SITE_TITLE = "3IFRIT — Plateforme de Renseignement MENA & Afrique | OSINT Temps Réel";
+const SITE_NAME = "Infowitz MENA";
+const SITE_TITLE = "Infowitz MENA — Plateforme de Renseignement MENA & Afrique | OSINT Temps Réel";
 const SITE_DESCRIPTION = "Plateforme OSINT souveraine centrée sur le MENA et l'Afrique. Surveillance des conflits, tracking aérien, maritime, séismes, médias et renseignement géopolitique en temps réel. Alternative open-source à Palantir.";
 
 export const viewport: Viewport = {
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: SITE_TITLE,
-    template: "%s | 3IFRIT Intelligence",
+    template: "%s | Infowitz MENA",
   },
   description: SITE_DESCRIPTION,
   keywords: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     "surveillance conflits", "tracking aérien", "suivi maritime",
     "DNS lookup", "WHOIS", "scanner de ports", "threat intelligence",
     "alternative Palantir", "dashboard intelligence", "open source OSINT",
-    "3IFRIT", "La Warroom", "info warfare", "geoint", "sigint",
+    "Infowitz MENA", "La Warroom", "info warfare", "geoint", "sigint",
     "Sahel", "Afrique subsaharienne", "Maghreb", "Moyen-Orient",
   ],
   authors: [{ name: "La Warroom", url: SITE_URL }],
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   other: {
     "apple-mobile-web-app-capable": "yes",
     "apple-mobile-web-app-status-bar-style": "black-translucent",
-    "apple-mobile-web-app-title": "3IFRIT",
+    "apple-mobile-web-app-title": "Infowitz MENA",
     "mobile-web-app-capable": "yes",
     "msapplication-TileColor": "#0A0E1A",
   },
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  name: "3IFRIT — Plateforme OSINT MENA & Afrique",
+  name: "Infowitz MENA — Plateforme OSINT MENA & Afrique",
   url: SITE_URL,
   description: SITE_DESCRIPTION,
   applicationCategory: "SecurityApplication",
@@ -79,7 +79,7 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased">
-        <ErrorBoundary name="3IFRIT Core">
+        <ErrorBoundary name="Infowitz MENA Core">
           {children}
         </ErrorBoundary>
       </body>
