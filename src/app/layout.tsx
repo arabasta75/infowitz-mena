@@ -7,7 +7,7 @@ const SITE_TITLE = "3IFRIT — Plateforme de Renseignement MENA & Afrique | OSIN
 const SITE_DESCRIPTION = "Plateforme OSINT souveraine centrée sur le MENA et l'Afrique. Surveillance des conflits, tracking aérien, maritime, séismes, médias et renseignement géopolitique en temps réel. Alternative open-source à Palantir.";
 
 export const viewport: Viewport = {
-  themeColor: "#FF4500",
+  themeColor: "#2563EB",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     "apple-mobile-web-app-status-bar-style": "black-translucent",
     "apple-mobile-web-app-title": "3IFRIT",
     "mobile-web-app-capable": "yes",
-    "msapplication-TileColor": "#06060C",
+    "msapplication-TileColor": "#0A0E1A",
   },
 };
 

@@ -47,7 +47,7 @@ export default function GlobalStatusBar() {
   const cveCount = cyber?.stats?.active_cves || 0;
 
   const riskColor = (level: string) =>
-    level === 'CRITICAL' ? '#FF3D3D' : level === 'HIGH' ? '#FF9500' : level === 'ELEVATED' ? '#FFD700' : '#00E676';
+    level === 'CRITICAL' ? '#EF4444' : level === 'HIGH' ? '#F59E0B' : level === 'ELEVATED' ? '#FFD700' : '#10B981';
 
   const countryFlag = (code: string) => {
     try {
