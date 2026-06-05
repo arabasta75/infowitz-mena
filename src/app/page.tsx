@@ -418,7 +418,7 @@ export default function Dashboard() {
                 animate={{ opacity: 1, scale: 1, rotate: 360 }}
                 transition={{ opacity: { duration: 0.6 }, scale: { duration: 0.8, ease: 'easeOut' }, rotate: { duration: 20, repeat: Infinity, ease: 'linear' } }}
                 className="absolute inset-0 rounded-full"
-                style={{ border: '1px solid rgba(255,69,0,0.2)' }}
+                style={{ border: '1px solid rgba(37, 99, 235,0.2)' }}
               >
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full" style={{ background: 'var(--gold-primary)', boxShadow: '0 0 12px var(--gold-primary), 0 0 24px rgba(212,175,55,0.3)' }} />
                 <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-1 h-1 rounded-full" style={{ background: 'rgba(212,175,55,0.5)', boxShadow: '0 0 6px rgba(212,175,55,0.3)' }} />
@@ -430,10 +430,10 @@ export default function Dashboard() {
                 animate={{ opacity: 1, scale: 1, rotate: -360 }}
                 transition={{ opacity: { duration: 0.6, delay: 0.15 }, scale: { duration: 0.8, delay: 0.15, ease: 'easeOut' }, rotate: { duration: 12, repeat: Infinity, ease: 'linear' } }}
                 className="absolute rounded-full"
-                style={{ inset: '18px', border: '1px solid rgba(0,229,255,0.15)' }}
+                style={{ inset: '18px', border: '1px solid rgba(56, 189, 248,0.15)' }}
               >
-                <div className="absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full" style={{ background: 'var(--cyan-primary)', boxShadow: '0 0 10px var(--cyan-primary), 0 0 20px rgba(0,229,255,0.2)' }} />
-                <div className="absolute bottom-0 left-1/4 translate-y-1/2 w-1 h-1 rounded-full" style={{ background: 'rgba(0,229,255,0.4)' }} />
+                <div className="absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full" style={{ background: 'var(--cyan-primary)', boxShadow: '0 0 10px var(--cyan-primary), 0 0 20px rgba(56, 189, 248,0.2)' }} />
+                <div className="absolute bottom-0 left-1/4 translate-y-1/2 w-1 h-1 rounded-full" style={{ background: 'rgba(56, 189, 248,0.4)' }} />
               </motion.div>
 
               {/* Inner ring — fastest clockwise */}
@@ -485,7 +485,7 @@ export default function Dashboard() {
                   animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
                   transition={{ delay: 0.5 + i * 0.08, duration: 0.5, ease: 'easeOut' }}
                   className="text-4xl md:text-5xl font-bold tracking-[0.5em] font-mono"
-                  style={{ color: 'var(--text-heading)', textShadow: '0 0 30px rgba(255,69,0,0.2)' }}
+                  style={{ color: 'var(--text-heading)', textShadow: '0 0 30px rgba(37, 99, 235,0.2)' }}
                 >
                   {letter}
                 </motion.span>
@@ -914,7 +914,7 @@ export default function Dashboard() {
       {/* ── BOTTOM CENTER (desktop) ── */}
       {!isMobile && (
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 3, duration: 0.8 }} className="desktop-only absolute bottom-5 left-1/2 -translate-x-1/2 z-[200] pointer-events-auto">
-          <div className="glass-panel px-5 py-2.5 flex items-center gap-0 osiris-glow relative overflow-hidden" style={{ borderImage: 'linear-gradient(90deg, rgba(255,69,0,0.05), rgba(255,69,0,0.2), rgba(255,69,0,0.05)) 1', borderImageSlice: 1, borderWidth: '1px', borderStyle: 'solid' }}>
+          <div className="glass-panel px-5 py-2.5 flex items-center gap-0 osiris-glow relative overflow-hidden" style={{ borderImage: 'linear-gradient(90deg, rgba(37, 99, 235,0.05), rgba(37, 99, 235,0.2), rgba(37, 99, 235,0.05)) 1', borderImageSlice: 1, borderWidth: '1px', borderStyle: 'solid' }}>
 
             {/* Animated scan line sweeping across the bar */}
             <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">

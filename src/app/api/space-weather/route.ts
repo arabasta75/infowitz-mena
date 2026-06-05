@@ -33,10 +33,10 @@ export async function GET() {
 
     // Storm level from Kp
     let stormLevel = 'Quiet';
-    let stormColor = '#00E676';
+    let stormColor = '#10B981';
     if (kpIndex >= 8) { stormLevel = 'Extreme (G5)'; stormColor = '#FF1744'; }
-    else if (kpIndex >= 7) { stormLevel = 'Severe (G4)'; stormColor = '#FF3D3D'; }
-    else if (kpIndex >= 6) { stormLevel = 'Strong (G3)'; stormColor = '#FF9500'; }
+    else if (kpIndex >= 7) { stormLevel = 'Severe (G4)'; stormColor = '#EF4444'; }
+    else if (kpIndex >= 6) { stormLevel = 'Strong (G3)'; stormColor = '#F59E0B'; }
     else if (kpIndex >= 5) { stormLevel = 'Moderate (G2)'; stormColor = '#FFD700'; }
     else if (kpIndex >= 4) { stormLevel = 'Minor (G1)'; stormColor = '#FFD700'; }
     else if (kpIndex >= 3) { stormLevel = 'Unsettled'; stormColor = '#D4AF37'; }

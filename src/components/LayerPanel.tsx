@@ -19,12 +19,12 @@ const LAYER_GROUPS = [
   {
     label: 'AVIATION',
     icon: Plane,
-    color: '#00E5FF',
+    color: '#38BDF8',
     layers: [
-      { key: 'flights', label: 'Commercial', icon: Plane, color: '#00E5FF', dataKey: 'commercial_flights' },
-      { key: 'private', label: 'Private', icon: Plane, color: '#00E676', dataKey: 'private_flights' },
+      { key: 'flights', label: 'Commercial', icon: Plane, color: '#38BDF8', dataKey: 'commercial_flights' },
+      { key: 'private', label: 'Private', icon: Plane, color: '#10B981', dataKey: 'private_flights' },
       { key: 'jets', label: 'Private Jets', icon: Plane, color: '#FF69B4', dataKey: 'private_jets' },
-      { key: 'military', label: 'Military', icon: Shield, color: '#FF3D3D', dataKey: 'military_flights' },
+      { key: 'military', label: 'Military', icon: Shield, color: '#EF4444', dataKey: 'military_flights' },
     ],
   },
   {
@@ -49,9 +49,9 @@ const LAYER_GROUPS = [
   {
     label: 'NATURAL HAZARDS',
     icon: Activity,
-    color: '#FF9500',
+    color: '#F59E0B',
     layers: [
-      { key: 'earthquakes', label: 'Earthquakes (24h)', icon: Activity, color: '#FF9500', dataKey: 'earthquakes' },
+      { key: 'earthquakes', label: 'Earthquakes (24h)', icon: Activity, color: '#F59E0B', dataKey: 'earthquakes' },
       { key: 'fires', label: 'Active Fires', icon: Flame, color: '#FF6B00', dataKey: 'fires' },
       { key: 'weather', label: 'Severe Weather', icon: CloudLightning, color: '#E040FB', dataKey: 'weather_events' },
     ],
@@ -59,19 +59,19 @@ const LAYER_GROUPS = [
   {
     label: 'THREATS & INFRA',
     icon: AlertTriangle,
-    color: '#FF3D3D',
+    color: '#EF4444',
     layers: [
       { key: 'infrastructure', label: 'Nuclear Facilities', icon: Radiation, color: '#76FF03', dataKey: 'infrastructure' },
-      { key: 'global_incidents', label: 'Global Incidents', icon: AlertTriangle, color: '#FF3D3D', dataKey: 'gdelt' },
+      { key: 'global_incidents', label: 'Global Incidents', icon: AlertTriangle, color: '#EF4444', dataKey: 'gdelt' },
       { key: 'gps_jamming', label: 'GPS Jamming', icon: Radio, color: '#FF4444', dataKey: 'gps_jamming' },
     ],
   },
   {
     label: 'DISPLAY',
     icon: Sun,
-    color: '#448AFF',
+    color: '#2563EB',
     layers: [
-      { key: 'day_night', label: 'Day / Night Cycle', icon: Sun, color: '#448AFF', dataKey: '' },
+      { key: 'day_night', label: 'Day / Night Cycle', icon: Sun, color: '#2563EB', dataKey: '' },
     ],
   },
 ];

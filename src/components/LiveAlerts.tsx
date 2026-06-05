@@ -14,11 +14,11 @@ interface LiveAlertsProps {
 }
 
 const RISK_COLORS: Record<string, string> = {
-  HIGH: '#FF3D3D',
+  HIGH: '#EF4444',
   CRITICAL: '#FF1744',
-  ELEVATED: '#FF9500',
+  ELEVATED: '#F59E0B',
   MODERATE: '#FFD700',
-  LOW: '#00E676',
+  LOW: '#10B981',
 };
 
 export default function LiveAlerts({ data, onLocate, onWatchFeed }: LiveAlertsProps) {

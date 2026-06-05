@@ -182,7 +182,7 @@ function classifyDevice(
     portSet.has(8554) ||
     cpeLower.some((c) => /camera|dvr|hikvision|dahua|axis|ipcam/.test(c))
   ) {
-    return { device_type: 'Camera/DVR', device_icon: 'Camera', device_color: '#FF3D3D' };
+    return { device_type: 'Camera/DVR', device_icon: 'Camera', device_color: '#EF4444' };
   }
 
   // Printer
@@ -209,7 +209,7 @@ function classifyDevice(
     portSet.has(161) ||
     portSet.has(8291)
   ) {
-    return { device_type: 'Router/Switch', device_icon: 'Router', device_color: '#00E5FF' };
+    return { device_type: 'Router/Switch', device_icon: 'Router', device_color: '#38BDF8' };
   }
 
   // Database
@@ -233,7 +233,7 @@ function classifyDevice(
     portSet.has(110) ||
     portSet.has(143)
   ) {
-    return { device_type: 'Mail Server', device_icon: 'Mail', device_color: '#FF9500' };
+    return { device_type: 'Mail Server', device_icon: 'Mail', device_color: '#F59E0B' };
   }
 
   // DNS Server
@@ -269,7 +269,7 @@ function classifyDevice(
 
   // Web Server
   if (portSet.has(80) || portSet.has(443) || portSet.has(8080) || portSet.has(8443)) {
-    return { device_type: 'Web Server', device_icon: 'Globe', device_color: '#448AFF' };
+    return { device_type: 'Web Server', device_icon: 'Globe', device_color: '#2563EB' };
   }
 
   // Fallback
