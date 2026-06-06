@@ -8,7 +8,7 @@ import { fetchTurkeyCameras } from './turkey';
 import { fetchRomaniaCameras } from './romania';
 
 /**
- * OSIRIS — Worldwide CCTV Camera API v2
+ * Infowitz MENA — Worldwide CCTV Camera API v2
  * Viewport-aware: pass ?region=xx to load cameras for specific regions
  * Supports: uk, us-east, us-west, us-central, canada, europe, asia
  * Or pass ?lat=x&lng=y&radius=5 for proximity-based loading
