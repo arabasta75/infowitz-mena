@@ -1,8 +1,8 @@
-# ⬡ 3IFRIT
+# ⬡ Infowitz MENA
 
 ### Plateforme de Renseignement MENA & Afrique — OSINT Temps Réel
 
-**3IFRIT** est un dashboard d'intelligence opérationnelle centré sur le MENA et l'Afrique subsaharienne. Construit sur Next.js 16 et MapLibre GL (rendu WebGL), il agrège en temps réel les données de vol, maritimes, sismiques, conflits, cyber-menaces et flux médias.
+**Infowitz MENA** est un dashboard d'intelligence opérationnelle centré sur le MENA et l'Afrique subsaharienne. Construit sur Next.js 16 et MapLibre GL (rendu WebGL), il agrège en temps réel les données de vol, maritimes, sismiques, conflits, cyber-menaces et flux médias.
 
 ---
 
@@ -36,8 +36,8 @@
 ## Démarrage rapide
 
 ```bash
-git clone https://github.com/arabasta75/3ifrit.git
-cd 3ifrit
+git clone https://github.com/arabasta75/infowitz-mena.git
+cd infowitz-mena
 npm install
 cp .env.example .env.local
 npm run dev

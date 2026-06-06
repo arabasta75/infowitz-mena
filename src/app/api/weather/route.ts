@@ -2,7 +2,7 @@
 import { NextResponse } from 'next/server';
 
 /**
- * OSIRIS — Severe Weather & Anomalies API
+ * Infowitz MENA — Severe Weather & Anomalies API
  * Fetches active natural events from NASA EONET (Earth Observatory Natural Event Tracker)
  * Tracks: Severe Storms (Hurricanes/Typhoons), Volcanoes, Sea Ice
  */
